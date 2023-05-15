@@ -52,7 +52,7 @@ onMounted(() => {
   mapStore.map.setView(home, zoom);
   L.tileLayer(mapUrls.googleSat, {
     maxZoom: 20,
-  }).addTo(mapStore.map);
+  }).addTo(mapStore.map as L.Map);
 
   // mapStore.map.on("click", (e: L.LeafletMouseEvent) => {
   //   console.log(e)

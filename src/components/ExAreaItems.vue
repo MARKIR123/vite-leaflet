@@ -17,8 +17,8 @@
 
                         <q-item-section side>
                             <div class="q-gutter-none">
-                                <q-btn @click.stop="mask.remove(exArea)" size="10px" color="grey-9" flat dense round icon="mdi-download-circle" />
-                                <q-btn @click.stop="mask.remove(exArea)" size="10px" color="red-9" flat dense round icon="mdi-close-circle" />
+                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="grey-9" flat dense round icon="mdi-download-circle" />
+                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="red-9" flat dense round icon="mdi-close-circle" />
                                 <q-btn @click.stop="" size="10px" color="blue-9" flat dense round icon="mdi-information" />
                             </div>
                         </q-item-section>

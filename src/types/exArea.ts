@@ -46,11 +46,11 @@ export class exArea {
             // 在请求成功的回调中获取 base64 格式的图片数据
             const overlay = L.imageOverlay((res as string), this.rectangle.getBounds(), { opacity: 0.5 });
             // 创建 Mask 对象
-            let mask = new Mask(`Mask ${this.masks.length + 1}`, overlay, this.exconfig, this);
+            let mask = new Mask(`Mask ${this.masks.length + 1}`, overlay, this.exconfig);
             // 添加到 masks 数组中
             this.masks.push(mask);
             // 将 ImageOverlay 添加到 Leaflet 中
-            overlay.addTo(getMapStore.map());
+            overlay.addTo(getMapStore.map() as L.Map);
         }).catch((error) => {
             console.log('axios:' + error)
         })

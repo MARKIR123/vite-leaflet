@@ -24,7 +24,7 @@ export const drawRect = () => {
         else {
             rectPoints.push(e.latlng);
             let bounds = L.latLngBounds(rectPoints);
-            let rect = L.rectangle(bounds, rectStyle).addTo(getMapStore.map());
+            let rect = L.rectangle(bounds, rectStyle).addTo(getMapStore.map() as L.Map);
             stopDraw();
 
             //完成矩形绘制后，将矩形传递给store
@@ -46,7 +46,7 @@ export const drawRect = () => {
         if (rectPoints.length == 1) {
             let bounds = L.latLngBounds(rectPoints[0], e.latlng);
             if (dynamicRect == null) {
-                dynamicRect = L.rectangle(bounds, rectStyle).addTo(getMapStore.map());
+                dynamicRect = L.rectangle(bounds, rectStyle).addTo(getMapStore.map() as L.Map);
             }
             else {
                 dynamicRect.setBounds(bounds);
