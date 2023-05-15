@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Darumadrop One
+- Font Author: Copyright 2020 The Darumadrop Project Authors (https://github.com/ManiackersDesign/darumadrop), all rights reserved.
+- Font Source: http://fonts.gstatic.com/s/darumadropone/v6/cY9cfjeIW11dpCKgRLi675a87IhHBJOxZQPp.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
