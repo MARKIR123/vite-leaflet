@@ -3,13 +3,15 @@ import { exConfig } from '../types/exConfig'
 import { tileArea } from '../types/typings'
 import axios from 'axios'
 
+const target = 'http://172.27.177.227:5089'
+
 export const requestTaskID = () => {
-  let url = `http://172.27.177.227:5089//getID`
+  let url = `${target}//getID`
 
 }
 // 请求掩膜
 export const requestMaskBase64 = (tileArea: tileArea, bound: LatLngBounds,zoom: number, config: exConfig) => {
-  let url = `http://172.27.177.227:5089//predict`
+  let url = `${target}//predict`
   return axios.post(url, {
     tileArea: tileArea,
     bound: bound,
@@ -31,7 +33,7 @@ export const requestMaskBase64 = (tileArea: tileArea, bound: LatLngBounds,zoom: 
 
 // 请求图片Sat & Mask
 export const requestImageBase64 = (imgType: string, taskID: number, model?: string) => {
-  let url = `http://172.27.177.227:5089//getImage`
+  let url = `${target}//getImage`
   return axios.post(url, {
     Type: imgType,
     TaskID: taskID,
