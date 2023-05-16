@@ -1,5 +1,6 @@
 <template>
-    <q-expansion-item v-for="exArea in exAreas" expand-separator icon="mdi-map-marker" :label="exArea.name">
+    <q-expansion-item class="shadow-1 q-mb-sm text-weight-thin" v-for="exArea in exAreas" expand-separator icon="mdi-map-marker"
+        :label="exArea.name">
         <q-card class="bg-grey-1">
             <q-card-section>
                 <q-list>
@@ -17,20 +18,13 @@
 
                         <q-item-section side>
                             <div class="q-gutter-none">
-                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="grey-9" flat dense round icon="mdi-download-circle" />
-                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="red-9" flat dense round icon="mdi-close-circle" />
+                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="grey-9" flat dense
+                                    round icon="mdi-download-circle" />
+                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="red-9" flat dense
+                                    round icon="mdi-close-circle" />
                                 <q-btn @click.stop="" size="10px" color="blue-9" flat dense round icon="mdi-information" />
                             </div>
                         </q-item-section>
-
-                        <!-- <q-menu context-menu touch-position>
-                            <q-item v-ripple clickable @click="mask.remove()">
-                                删除
-                            </q-item>
-                            <q-item v-ripple clickable>
-                                配置...
-                            </q-item>
-                        </q-menu> -->
                     </q-item>
                 </q-list>
             </q-card-section>
