@@ -59,8 +59,10 @@ export const drawRect = () => {
         getMapStore.map().off('click');
         getMapStore.map().off('contextmenu');
         getMapStore.map().off('mousemove');
-        rectPoints = [];
-        getMapStore.map().removeLayer(dynamicRect);
-        dynamicRect = null;
+        if (dynamicRect != null) {
+            rectPoints = [];
+            getMapStore.map().removeLayer(dynamicRect);
+            dynamicRect = null;
+        }
     }
 }

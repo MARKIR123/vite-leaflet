@@ -6,7 +6,7 @@
             </q-page-container>
             <q-drawer :mini="miniState" :mini-width="56" @click.capture="drawerClick" mini-to-overlay v-model="DrawerOpen" :width="280"
                 :breakpoint="500" overlay elevated>
-                <q-item style="padding-left: 10;!important" clickable v-ripple>
+                <q-item clickable v-ripple href="https://github.com/MARKIR123" target="_blank">
                     <q-item-section class="q-ml-ms" avatar>
                         <q-avatar round>
                             <img style="max-width:80%;height:auto;" src="/ask.png"/>
