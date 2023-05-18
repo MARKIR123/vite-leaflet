@@ -3,7 +3,8 @@ import { exConfig } from '../types/exConfig'
 import { tileArea } from '../types/typings'
 import axios from 'axios'
 
-const target = 'http://172.27.177.227:5089'
+//const target = 'http://172.27.177.227:5089'
+const target = '/api'
 
 export const requestTaskID = () => {
   let url = `${target}//getID`
