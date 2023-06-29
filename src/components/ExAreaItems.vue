@@ -1,40 +1,19 @@
 <template>
-    <q-expansion-item class="shadow-1 q-mb-sm text-weight-thin" v-for="exArea in exAreas" expand-separator icon="mdi-map-marker"
-        :label="exArea.name">
-        <q-card class="bg-grey-1">
+    <q-expansion-item class="shadow-10 q-mb-sm text-weight-thin bg-white" v-for="route in routes" expand-separator
+        icon="mdi-map-marker" :label="route.name">
+        <q-card class="q-px-none">
             <q-card-section>
-                <q-list>
-                    <q-item dense clickable v-ripple v-for="mask in exArea.masks" @click="">
-                        <!-- <q-checkbox v-model="mask.visible" @update:model-value="mask.hideAndshow()"
-                            size="24px"></q-checkbox> -->
-                        <q-item-section style="width: 5px;">
-                            <q-slider dense v-model="mask.opacity" :min="0" :max="1" :step="0.1"
-                                @update:model-value="mask.setOpacity()" label color="primary" />
-                        </q-item-section>
-
-                        <q-item-section class="text-center">
-                            <q-item-label>{{ mask.name }}</q-item-label>
-                        </q-item-section>
-
-                        <q-item-section side>
-                            <div class="q-gutter-none">
-                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="grey-9" flat dense
-                                    round icon="mdi-download-circle" />
-                                <q-btn @click.stop="mask.remove(exArea as exArea)" size="10px" color="red-9" flat dense
-                                    round icon="mdi-close-circle" />
-                                <q-btn @click.stop="" size="10px" color="blue-9" flat dense round icon="mdi-information" />
-                            </div>
-                        </q-item-section>
-                    </q-item>
-                </q-list>
+                名字： {{ route.name }}
+            </q-card-section>
+            <q-card-section>
+                介绍： {{ route.desc }}
             </q-card-section>
 
             <q-card-actions align="right">
-                <q-toggle v-model="exArea.visible" @update:model-value="exArea.showOrHide()" keep-color color="primary" />
+                <q-toggle v-model="route.visible" @update:model-value="route.switchVisible()" keep-color color="primary" />
                 <q-space />
-                <q-btn flat class="text-grey-9" @click="exArea.focus()">转到</q-btn>
-                <q-btn flat class="text-blue" @click="exArea.extract(20)">提取</q-btn>
-                <q-btn flat class="text-red" @click="exArea.delete()">删除</q-btn>
+                <q-btn flat class="text-grey-9" @click="route.focus()">转到</q-btn>
+                <q-btn flat class="text-red" @click="route.delete()">删除</q-btn>
             </q-card-actions>
         </q-card>
     </q-expansion-item>
@@ -44,14 +23,10 @@
 import { onBeforeMount, onMounted } from 'vue';
 import { useMapStore } from '../store/mapStore';
 import { storeToRefs } from 'pinia';
-import { exArea } from '../types/exArea';
+import { Route } from '../types/Route'
 
 const mapStore = useMapStore();
-const { exAreas } = storeToRefs(mapStore);
-
-const test = (exArea: exArea) => {
-    console.log(exArea.getTileAreas(20));
-}
+const { routes } = storeToRefs(mapStore);
 
 onBeforeMount(() => {
     //console.log('2.组件挂载页面之前执行----onBeforeMount')

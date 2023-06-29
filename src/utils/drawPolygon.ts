@@ -1,20 +1,31 @@
-import L from 'leaflet';
+import * as L from 'leaflet';
 import getMapStore from '../store/getMapStore'
+import { Notify } from 'quasar'
 
 //多边形点集
 var polygonPoints: L.LatLng[] = [];
 //动态多边形
 var dynamicPolygon: L.Polygon = null;
-
+// 消息窗口
+var dismiss: any = null;
 //多边形样式
 var polygonStyle: L.PolylineOptions = {
     color: 'white',
     fillColor: 'white',
-    fillOpacity: 0.2,
-    weight: 2
+    fillOpacity: 0.5,
+    weight: 4
 }
 
 export const drawPolygon = () => {
+    //提示正在绘制
+    dismiss = Notify.create({
+        message: `正在绘制样本 ${getMapStore.editingClass().labelArea.name} - ${getMapStore.editingClass().name}`,
+        color: "primary",
+        icon: "mdi-vector-rectangle",
+        position: "bottom-right",
+        timeout: 0,
+    })
+    polygonStyle.fillColor = getMapStore.editingClass().color;
     //鼠标左击事件
     getMapStore.map().on('click', (e: L.LeafletMouseEvent) => {
         polygonPoints.push(e.latlng);
@@ -26,22 +37,20 @@ export const drawPolygon = () => {
         }
     })
 
-    //鼠标右击事件
+    //鼠标右击事件完成绘制
     getMapStore.map().on('contextmenu', (e: L.LeafletMouseEvent) => {
-        polygonPoints = [];
-        if (dynamicPolygon != null) {
-            getMapStore.map().removeLayer(dynamicPolygon);
-            dynamicPolygon = null;
-        }
-    })
-
-    //鼠标双击事件
-    getMapStore.map().on('dblclick', (e: L.LeafletMouseEvent) => {
         if (polygonPoints.length > 2) {
+            dynamicPolygon.remove();
             let polygon = L.polygon(polygonPoints, polygonStyle).addTo(getMapStore.map() as L.Map);
-
-            //完成多边形绘制后，将多边形传递给store
-            // getMapStore.exAreas().push(new exArea(polygon));
+            // 完成多边形绘制后，将多边形传递给store
+            if (getMapStore.classEditing()) {
+                getMapStore.editingClass().addLabel(polygon);
+            }
+            else {
+                console.log('当前没有正在编辑的类别！！！');
+            }
+            polygonPoints = [];
+            dynamicPolygon = null;
         }
     })
 
@@ -57,16 +66,16 @@ export const drawPolygon = () => {
             }
         }
     })
+}
 
-    //停止绘制
-    const stopDraw = () => {
-        getMapStore.map().off('click');
-        getMapStore.map().off('contextmenu');
-        getMapStore.map().off('mousemove');
-        if (dynamicPolygon != null) {
-            polygonPoints = [];
-            getMapStore.map().removeLayer(dynamicPolygon);
-            dynamicPolygon = null;
-        }
+export const stopDrawPolygon = () => {
+    getMapStore.map().off('click');
+    getMapStore.map().off('contextmenu');
+    getMapStore.map().off('mousemove');
+    if (dynamicPolygon != null) {
+        polygonPoints = [];
+        getMapStore.map().removeLayer(dynamicPolygon);
+        dynamicPolygon = null;
     }
+    dismiss();
 }

@@ -2,7 +2,11 @@ import { createApp, toRaw } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 
-import { Quasar } from 'quasar'
+import {
+  Quasar,
+  Notify,
+  Dialog,
+} from 'quasar'
 import quasarLang from 'quasar/lang/zh-CN'
 
 // Import icon libraries
@@ -21,7 +25,14 @@ const app = createApp(App)
 
 app.use(store)
 app.use(Quasar, {
-  plugins: {}, // import Quasar plugins and add here
+  plugins: {
+    Notify,
+    Dialog,
+  },
+  config: {
+    notify: { /* look at QuasarConfOptions from the API card */ }
+  },
   lang: quasarLang,
 })
+
 app.mount('#app')

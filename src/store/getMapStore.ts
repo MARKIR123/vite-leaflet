@@ -6,9 +6,8 @@ export default {
         map: (state) => {
             return state.map
         },
-
-        exAreas: (state) => {
-            return state.exAreas
-        }
+        routes: (state) => {
+            return state.routes
+        },
     })
 }
