@@ -1,8 +1,6 @@
 import L from 'leaflet';
 import getMapStore from '../store/getMapStore'
-
-
-import { Notify } from 'quasar'
+import { exArea } from '../types/exArea';
 
 //矩形点集
 var rectPoints: L.LatLng[] = [];
@@ -18,14 +16,6 @@ var rectStyle: L.PolylineOptions = {
 }
 
 export const drawRect = () => {
-    //提示正在绘制
-    const dismiss = Notify.create({
-        message: "正在绘制提取区域",
-        color: "primary",
-        icon: "mdi-vector-rectangle",
-        position: "bottom-right",
-        timeout: 0,
-    })
     //鼠标左击事件
     getMapStore.map().on('click', (e: L.LeafletMouseEvent) => {
         if (rectPoints.length == 0) {
@@ -38,8 +28,7 @@ export const drawRect = () => {
             stopDraw();
 
             //完成矩形绘制后，将矩形传递给store
-            getMapStore.exAreas().push(new ExArea(rect));
-            dismiss();
+            getMapStore.exAreas().push(new exArea(rect));
         }
     })
 
