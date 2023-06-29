@@ -1,0 +1,482 @@
+{
+    "routes": [
+        {
+            "geometry": "e|a{DsogdTdEmClBqLrB}AxE}@lBaBbAkI~AqEdFeChE@lEnAfE`@dFyBbK_JlFeHvCaGzAuG|_@fWp@Bn@}@o@|@q@C}_@gWmN}KoEg@oHd@k@{Iud@dH{BC",
+            "legs": [
+                {
+                    "steps": [
+                        {
+                            "geometry": "e|a{DsogdTn@WzAu@x@_Ab@{AVaETuAZ}@n@s@bAi@hB]nB_@t@e@v@{@`@qAPgBNqCd@qBx@_BfAaApAk@jAWnAKdAFr@DlEnAhBZ|AD",
+                            "maneuver": {
+                                "bearing_after": 157,
+                                "bearing_before": 0,
+                                "location": [
+                                    110.963299,
+                                    30.816834
+                                ],
+                                "modifier": "right",
+                                "type": "depart",
+                                "instruction": "Head southeast on 明珠大道"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "明珠大道",
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "entry": [
+                                        true
+                                    ],
+                                    "bearings": [
+                                        157
+                                    ],
+                                    "location": [
+                                        110.963299,
+                                        30.816834
+                                    ]
+                                },
+                                {
+                                    "out": 2,
+                                    "in": 0,
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true,
+                                        true
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        75,
+                                        180,
+                                        270
+                                    ],
+                                    "location": [
+                                        110.970847,
+                                        30.810346
+                                    ]
+                                }
+                            ],
+                            "weight": 519.5,
+                            "duration": 338.1,
+                            "distance": 1401
+                        },
+                        {
+                            "geometry": "ke`{Da{hdTZ]v@SlA]bAi@vEqD",
+                            "maneuver": {
+                                "bearing_after": 136,
+                                "bearing_before": 182,
+                                "location": [
+                                    110.97025,
+                                    30.808063
+                                ],
+                                "modifier": "left",
+                                "type": "turn",
+                                "instruction": "Turn left"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "",
+                            "intersections": [
+                                {
+                                    "out": 1,
+                                    "in": 0,
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        135,
+                                        180
+                                    ],
+                                    "location": [
+                                        110.97025,
+                                        30.808063
+                                    ]
+                                }
+                            ],
+                            "weight": 106.9,
+                            "duration": 69.5,
+                            "distance": 289.5
+                        },
+                        {
+                            "geometry": "mw_{DmdidTjDmDlFeHvCaGzAuG",
+                            "maneuver": {
+                                "bearing_after": 137,
+                                "bearing_before": 143,
+                                "location": [
+                                    110.971752,
+                                    30.805833
+                                ],
+                                "modifier": "straight",
+                                "type": "new name",
+                                "instruction": "Continue onto 楚天路"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "楚天路",
+                            "intersections": [
+                                {
+                                    "out": 1,
+                                    "in": 3,
+                                    "entry": [
+                                        true,
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        135,
+                                        255,
+                                        330
+                                    ],
+                                    "location": [
+                                        110.971752,
+                                        30.805833
+                                    ]
+                                }
+                            ],
+                            "weight": 298.9,
+                            "duration": 152.2,
+                            "distance": 611.5
+                        },
+                        {
+                            "geometry": "_c_{DycjdT|_@fWZFTCTQXk@",
+                            "maneuver": {
+                                "bearing_after": 210,
+                                "bearing_before": 109,
+                                "location": [
+                                    110.97677,
+                                    30.802562
+                                ],
+                                "modifier": "right",
+                                "type": "turn",
+                                "instruction": "Turn right"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "",
+                            "intersections": [
+                                {
+                                    "out": 2,
+                                    "in": 3,
+                                    "entry": [
+                                        true,
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        105,
+                                        210,
+                                        285
+                                    ],
+                                    "location": [
+                                        110.97677,
+                                        30.802562
+                                    ]
+                                }
+                            ],
+                            "weight": 229,
+                            "duration": 183.1,
+                            "distance": 763.1
+                        },
+                        {
+                            "geometry": "__~zDkmidT",
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "bearing_before": 126,
+                                "location": [
+                                    110.973177,
+                                    30.796795
+                                ],
+                                "modifier": "right",
+                                "type": "arrive",
+                                "instruction": "You have arrived at your 1st destination, on the right"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "",
+                            "intersections": [
+                                {
+                                    "in": 0,
+                                    "entry": [
+                                        true
+                                    ],
+                                    "bearings": [
+                                        306
+                                    ],
+                                    "location": [
+                                        110.973177,
+                                        30.796795
+                                    ]
+                                }
+                            ],
+                            "weight": 0,
+                            "duration": 0,
+                            "distance": 0
+                        }
+                    ],
+                    "summary": "明珠大道, 楚天路",
+                    "weight": 1154.3,
+                    "duration": 742.9,
+                    "distance": 3065.1
+                },
+                {
+                    "steps": [
+                        {
+                            "geometry": "__~zDkmidTYj@UPUB[G}_@gW",
+                            "maneuver": {
+                                "bearing_after": 306,
+                                "bearing_before": 0,
+                                "location": [
+                                    110.973177,
+                                    30.796795
+                                ],
+                                "modifier": "left",
+                                "type": "depart",
+                                "instruction": "Head northwest"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "",
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "entry": [
+                                        true
+                                    ],
+                                    "bearings": [
+                                        306
+                                    ],
+                                    "location": [
+                                        110.973177,
+                                        30.796795
+                                    ]
+                                }
+                            ],
+                            "weight": 229,
+                            "duration": 183.1,
+                            "distance": 763.1
+                        },
+                        {
+                            "geometry": "_c_{DycjdTaKuIs@c@w@c@s@UmAMmACiA@sE^QB",
+                            "maneuver": {
+                                "bearing_after": 36,
+                                "bearing_before": 30,
+                                "location": [
+                                    110.97677,
+                                    30.802562
+                                ],
+                                "modifier": "straight",
+                                "type": "new name",
+                                "instruction": "Continue onto 建东大道 (S334)"
+                            },
+                            "mode": "cycling",
+                            "ref": "S334",
+                            "driving_side": "right",
+                            "name": "建东大道 (S334)",
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "in": 2,
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        105,
+                                        210,
+                                        285
+                                    ],
+                                    "location": [
+                                        110.97677,
+                                        30.802562
+                                    ]
+                                }
+                            ],
+                            "weight": 305.5,
+                            "duration": 154.8,
+                            "distance": 627.7
+                        },
+                        {
+                            "geometry": "mb`{DypjdTMgBWeEEm@",
+                            "maneuver": {
+                                "bearing_after": 81,
+                                "bearing_before": 351,
+                                "location": [
+                                    110.978846,
+                                    30.807594
+                                ],
+                                "modifier": "right",
+                                "type": "turn",
+                                "instruction": "Turn right"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "",
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "in": 1,
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        165,
+                                        345
+                                    ],
+                                    "location": [
+                                        110.978846,
+                                        30.807594
+                                    ]
+                                }
+                            ],
+                            "weight": 49.9,
+                            "duration": 49.9,
+                            "distance": 168
+                        },
+                        {
+                            "geometry": "yc`{Du{jdTu@NoEr@oAR{IrAgGt@_CXi@Jc@Pm@JU?m@I]?YD",
+                            "maneuver": {
+                                "bearing_after": 344,
+                                "bearing_before": 81,
+                                "location": [
+                                    110.980587,
+                                    30.807809
+                                ],
+                                "modifier": "left",
+                                "type": "turn",
+                                "instruction": "Turn left onto 迎宾路"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "迎宾路",
+                            "intersections": [
+                                {
+                                    "out": 2,
+                                    "in": 1,
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "bearings": [
+                                        165,
+                                        255,
+                                        345
+                                    ],
+                                    "location": [
+                                        110.980587,
+                                        30.807809
+                                    ]
+                                },
+                                {
+                                    "out": 2,
+                                    "in": 0,
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "bearings": [
+                                        165,
+                                        255,
+                                        345
+                                    ],
+                                    "location": [
+                                        110.980151,
+                                        30.809523
+                                    ]
+                                }
+                            ],
+                            "weight": 278.7,
+                            "duration": 181.4,
+                            "distance": 755.2
+                        },
+                        {
+                            "geometry": "kma{DsrjdT",
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "bearing_before": 349,
+                                "location": [
+                                    110.979136,
+                                    30.814457
+                                ],
+                                "modifier": "left",
+                                "type": "arrive",
+                                "instruction": "You have arrived at your destination, on the left"
+                            },
+                            "mode": "cycling",
+                            "driving_side": "right",
+                            "name": "迎宾路",
+                            "intersections": [
+                                {
+                                    "in": 0,
+                                    "entry": [
+                                        true
+                                    ],
+                                    "bearings": [
+                                        169
+                                    ],
+                                    "location": [
+                                        110.979136,
+                                        30.814457
+                                    ]
+                                }
+                            ],
+                            "weight": 0,
+                            "duration": 0,
+                            "distance": 0
+                        }
+                    ],
+                    "summary": "建东大道, 迎宾路",
+                    "weight": 863.1,
+                    "duration": 569.2,
+                    "distance": 2314
+                }
+            ],
+            "weight_name": "cyclability",
+            "weight": 2017.4,
+            "duration": 1312.1,
+            "distance": 5379.1
+        }
+    ],
+    "waypoints": [
+        {
+            "distance": 46.25580186575588,
+            "name": "明珠大道",
+            "location": [
+                110.963299,
+                30.816834
+            ]
+        },
+        {
+            "distance": 116.11957233275507,
+            "name": "",
+            "location": [
+                110.973177,
+                30.796795
+            ]
+        },
+        {
+            "distance": 81.56617112812445,
+            "name": "迎宾路",
+            "location": [
+                110.979136,
+                30.814457
+            ]
+        }
+    ],
+    "code": "Ok",
+    "uuid": "cpRiqvlfhtCCFb1PRa4wPc7hFm9u96xIg_4ZuWroOQCes1c-DczVxQ=="
+}
